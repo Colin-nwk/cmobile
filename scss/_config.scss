@@ -1,0 +1,15 @@
+// variables
+$fonts: "Quicksand", sans-serif;
+$dark-color: #141414;
+$light-color: #fcfcfc;
+$main-color: #1e836c;
+$primary-color: #b2f5f175;
+$secondary-color: #fcc2c293;
+//color function
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

@@ -1,0 +1,76 @@
+// container
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+// media query mixins
+@mixin media-sm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin media-md {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+// margin and padding spacing
+$space-amounts: (1, 2, 3, 4, 5);
+
+@each $space in $space-amounts {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+  .mb-#{$space} {
+    margin: 0 0 #{$space}rem 0;
+  }
+  .mt-#{$space} {
+    margin: #{$space}rem 0 0 0;
+  }
+  .ml-#{$space} {
+    margin: 0 0 0 #{$space}rem;
+  }
+  .mr-#{$space} {
+    margin: 0 #{$space}rem 0 0;
+  }
+  .mx-#{$space} {
+    margin: 0 #{$space}rem;
+  }
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+  .pt-#{$space} {
+    padding: #{$space}rem 0 0 0;
+  }
+  .pb-#{$space} {
+    padding: 0 0 #{$space}rem 0;
+  }
+  .pr-#{$space} {
+    padding: 0 #{$space}rem 0 0;
+  }
+  .pl-#{$space} {
+    padding: 0 0 0 #{$space}rem;
+  }
+  .py-#{$space} {
+    padding: #{$space}rem 0;
+  }
+  .px-#{$space} {
+    padding: 0 #{$space}rem;
+  }
+}

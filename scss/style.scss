@@ -1,0 +1,17 @@
+@import "reset";
+@import "config";
+@import "utility";
+@import "animation";
+@import "header";
+@import "about";
+@import "project";
+@import "footer";
+h1 {
+  font-family: $fonts;
+  font-weight: 300;
+}
+h2 {
+  font-family: fantasy;
+}
+
+@import "media";

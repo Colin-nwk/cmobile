@@ -1,0 +1,51 @@
+@keyframes globeBounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px) scale(1.01);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes topToBottom {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-text {
+  0% {
+    transform: translateY(-10px);
+  }
+  25% {
+    transform: translateY(-80px);
+  }
+  50% {
+    transform: translateY(-140px);
+  }
+  75% {
+    transform: translateY(-220px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
