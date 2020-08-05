@@ -1,0 +1,108 @@
+// ABOUT SECTION
+.about {
+  #skill-icons {
+    background: $secondary-color;
+  }
+  &-skills {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .html {
+    //   color: #f16529;
+    color: #e44d26;
+  }
+  .css {
+    //   color: #45a0d9;
+    color: #2062af;
+  }
+  .word {
+    color: #000;
+  }
+  .sass {
+    color: #cf649a;
+  }
+  .boot {
+    color: #7952b3;
+  }
+  .js {
+    color: #f0db4f;
+  }
+  &-me-content {
+    line-height: 2;
+    .text-2 {
+      text-align: start;
+    }
+  }
+
+  .site-content {
+    //   background: $dark-color;
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(200px, 1fr);
+
+      // grid-gap: 2rem;
+
+      .items {
+        .meteor-bg {
+          background: #fff;
+          height: 120px;
+          width: 120px;
+          border-radius: 50%;
+          position: relative;
+          overflow: hidden;
+        }
+        .meteor {
+          padding-top: 20px;
+          border-radius: 50%;
+          color: orangered;
+          animation: move-in 3s linear infinite;
+          position: absolute;
+        }
+
+        // width: 400px;
+        // clip-path: polygon(50% 0, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+        // clip-path: polygon(
+        //   30% 0%,
+        //   70% 0%,
+        //   100% 30%,
+        //   100% 70%,
+        //   70% 100%,
+        //   30% 100%,
+        //   0% 70%,
+        //   0% 30%
+        // );
+        clip-path: polygon(
+          20% 0%,
+          80% 0%,
+          100% 20%,
+          100% 80%,
+          80% 100%,
+          20% 100%,
+          0% 80%,
+          0% 20%
+        );
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+        height: 200px;
+        margin: auto 0;
+        padding: 1rem;
+        &:nth-child(odd) {
+          background-color: $secondary-color;
+        }
+        &:nth-child(even) {
+          background-color: $primary-color;
+        }
+        .upper {
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

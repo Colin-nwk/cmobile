@@ -3,15 +3,12 @@
 @import "utility";
 @import "animation";
 @import "header";
+
+// .main-area
 @import "about";
 @import "project";
-@import "footer";
-h1 {
-  font-family: $fonts;
-  font-weight: 300;
-}
-h2 {
-  font-family: fantasy;
-}
+@import "contact";
 
+// footer
+@import "footer";
 @import "media";

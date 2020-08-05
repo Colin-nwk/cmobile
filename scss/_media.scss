@@ -1,0 +1,143 @@
+@include media-sm {
+  .about {
+    .site-content {
+      .about-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+
+        .items {
+          min-height: 280px;
+          // clip-path: polygon(
+          //   20% 0%,
+          //   80% 0%,
+          //   100% 20%,
+          //   100% 80%,
+          //   80% 100%,
+          //   20% 100%,
+          //   0% 80%,
+          //   0% 20%
+          // );
+          clip-path: polygon(
+            30% 0%,
+            70% 0%,
+            100% 30%,
+            100% 70%,
+            70% 100%,
+            30% 100%,
+            0% 70%,
+            0% 30%
+          );
+        }
+      }
+    }
+  }
+}
+
+@include media-lg {
+  .heading-1 {
+    font-size: 5rem;
+  }
+  .heading-2 {
+    font-size: 3.5rem;
+  }
+  .heading-3 {
+    font-size: 3rem;
+  }
+  .about-skills,
+  .items,
+  .card {
+    .icon {
+      font-size: 3.5rem;
+    }
+  }
+  .about-me-content,
+  .contact-content {
+    .text-2,
+    .text-1 {
+      width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  // .about {
+  //   .site-content {
+  //     .about-grid {
+  //       display: grid;
+  //       grid-template-columns: repeat(2, 1fr);
+  //       grid-gap: 1rem;
+
+  //       .items {
+  //         min-height: 280px;
+  //       }
+  //     }
+  //   }
+  // }
+  .projects {
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .contact {
+    padding-bottom: 3rem;
+    .form-control,
+    .message-input,
+    .btn {
+      width: 400px;
+      margin: 1rem 2rem;
+      padding: 0.4rem;
+    }
+  }
+  .header {
+    .navbar {
+      font-size: 1.2rem;
+      .nav-items {
+        margin-right: 3rem;
+      }
+    }
+  }
+  .about {
+    .site-content {
+      .about-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+  @include media-xl {
+    .about {
+      .site-content {
+        .about-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 1rem;
+
+          .items {
+            min-height: 280px;
+          }
+        }
+      }
+    }
+    .about-skills,
+    .items,
+    .card {
+      .icon {
+        font-size: 4.5rem;
+      }
+    }
+    .about-skills {
+      padding-bottom: 3rem;
+    }
+    .about-me-content,
+    .card,
+    .contact {
+      .text-2 {
+        font-size: 1.3rem;
+      }
+    }
+    .card {
+      padding-bottom: 3rem;
+    }
+  }
+}
