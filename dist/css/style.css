@@ -63,8 +63,8 @@ a {
 }
 
 .about-skills .icon,
-.items .icon,
-.card .icon {
+.card .icon,
+.items .icon {
   font-size: 2.5rem;
 }
 
@@ -750,16 +750,16 @@ a {
 
 @-webkit-keyframes move-in {
   0% {
-    top: -40px;
+    top: -60px;
     left: 60px;
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
   }
   20% {
     top: -10px;
     left: 40px;
-    -webkit-transform: scale(0.75);
-            transform: scale(0.75);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   40% {
     top: 40px;
@@ -774,29 +774,29 @@ a {
             transform: scale(0.9);
   }
   80% {
-    top: 110px;
+    top: 100px;
     left: -20px;
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
   }
   100% {
-    top: 140px;
+    top: 130px;
     left: -40px;
   }
 }
 
 @keyframes move-in {
   0% {
-    top: -40px;
+    top: -60px;
     left: 60px;
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
   }
   20% {
     top: -10px;
     left: 40px;
-    -webkit-transform: scale(0.75);
-            transform: scale(0.75);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   40% {
     top: 40px;
@@ -811,14 +811,130 @@ a {
             transform: scale(0.9);
   }
   80% {
-    top: 110px;
+    top: 100px;
     left: -20px;
     -webkit-transform: scale(0.95);
             transform: scale(0.95);
   }
   100% {
-    top: 140px;
+    top: 130px;
     left: -40px;
+  }
+}
+
+@-webkit-keyframes light {
+  0% {
+    color: #b4a6a6;
+  }
+  20% {
+    text-shadow: 1px 1px 2px #dada3f, -1px -1px 2px #dada3f;
+    color: #dada3f;
+  }
+  40% {
+    color: #e2e226;
+  }
+  60% {
+    color: #e2e226;
+  }
+  80% {
+    color: yellow;
+  }
+  100% {
+    color: yellow;
+  }
+}
+
+@keyframes light {
+  0% {
+    color: #b4a6a6;
+  }
+  20% {
+    text-shadow: 1px 1px 2px #dada3f, -1px -1px 2px #dada3f;
+    color: #dada3f;
+  }
+  40% {
+    color: #e2e226;
+  }
+  60% {
+    color: #e2e226;
+  }
+  80% {
+    color: yellow;
+  }
+  100% {
+    color: yellow;
+  }
+}
+
+@-webkit-keyframes change-icon {
+  0% {
+    padding-top: 40px;
+  }
+  50% {
+    padding-top: 100px;
+  }
+}
+
+@keyframes change-icon {
+  0% {
+    padding-top: 40px;
+  }
+  50% {
+    padding-top: 100px;
+  }
+}
+
+@-webkit-keyframes space-in {
+  0% {
+    bottom: -60px;
+    right: 60px;
+  }
+  20% {
+    bottom: -10px;
+    right: 45px;
+  }
+  40% {
+    bottom: 40px;
+    right: 30px;
+  }
+  60% {
+    bottom: 70px;
+    right: 15px;
+  }
+  80% {
+    bottom: 100px;
+    right: 0px;
+  }
+  100% {
+    bottom: 130px;
+    right: -15px;
+  }
+}
+
+@keyframes space-in {
+  0% {
+    bottom: -60px;
+    right: 60px;
+  }
+  20% {
+    bottom: -10px;
+    right: 45px;
+  }
+  40% {
+    bottom: 40px;
+    right: 30px;
+  }
+  60% {
+    bottom: 70px;
+    right: 15px;
+  }
+  80% {
+    bottom: 100px;
+    right: 0px;
+  }
+  100% {
+    bottom: 130px;
+    right: -15px;
   }
 }
 
@@ -1012,21 +1128,48 @@ a {
   padding: 1rem;
 }
 
-.about .site-content .about-grid .items .meteor-bg {
+.about .site-content .about-grid .items .anim-bg {
   background: #fff;
-  height: 120px;
-  width: 120px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
-  position: relative;
   overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .about .site-content .about-grid .items .meteor {
-  padding-top: 20px;
   border-radius: 50%;
   color: orangered;
-  -webkit-animation: move-in 3s linear infinite;
-          animation: move-in 3s linear infinite;
+  -webkit-animation: move-in 2s linear infinite;
+          animation: move-in 2s linear infinite;
+  position: absolute;
+}
+
+.about .site-content .about-grid .items .bulb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: light 3s ease-in-out infinite;
+          animation: light 3s ease-in-out infinite;
+}
+
+.about .site-content .about-grid .items .res {
+  -webkit-animation: change-icon 2s ease-in-out infinite;
+          animation: change-icon 2s ease-in-out infinite;
+}
+
+.about .site-content .about-grid .items .rocket {
+  -webkit-animation: space-in 1s ease-in-out infinite;
+          animation: space-in 1s ease-in-out infinite;
   position: absolute;
 }
 
@@ -1291,7 +1434,6 @@ a {
     font-size: 3rem;
   }
   .about-skills .icon,
-  .items .icon,
   .card .icon {
     font-size: 3.5rem;
   }
