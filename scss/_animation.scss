@@ -213,14 +213,14 @@
 
 @keyframes move-in {
   0% {
-    top: -40px;
+    top: -60px;
     left: 60px;
-    transform: scale(0.7);
+    transform: scale(0.75);
   }
   20% {
     top: -10px;
     left: 40px;
-    transform: scale(0.75);
+    transform: scale(0.8);
   }
   40% {
     top: 40px;
@@ -233,12 +233,74 @@
     transform: scale(0.9);
   }
   80% {
-    top: 110px;
+    top: 100px;
     left: -20px;
     transform: scale(0.95);
   }
   100% {
-    top: 140px;
+    top: 130px;
     left: -40px;
+  }
+}
+
+@keyframes light {
+  0% {
+    color: #b4a6a6;
+  }
+  20% {
+    text-shadow: 1px 1px 2px #dada3f, -1px -1px 2px #dada3f;
+    color: #dada3f;
+  }
+  40% {
+    // text-shadow: 3px 3px 4px #e2e226, -3px -3px 6px #e2e226;
+    color: #e2e226;
+    // text-shadow: ;
+  }
+
+  60% {
+    // text-shadow: 4px 4px 6px #ecec14, -4px -4px 6px #e2e226;
+    color: #e2e226;
+    // text-shadow: ;
+  }
+  80% {
+    color: yellow;
+  }
+  100% {
+    color: yellow;
+  }
+}
+@keyframes change-icon {
+  0% {
+    padding-top: 40px;
+  }
+  50% {
+    padding-top: 100px;
+  }
+}
+
+@keyframes space-in {
+  0% {
+    bottom: -60px;
+    right: 60px;
+  }
+  20% {
+    bottom: -10px;
+    right: 45px;
+  }
+  40% {
+    bottom: 40px;
+    right: 30px;
+  }
+  60% {
+    bottom: 70px;
+    right: 15px;
+  }
+  80% {
+    bottom: 100px;
+    right: 0px;
+  }
+  100% {
+    bottom: 130px;
+    right: -15px;
   }
 }
