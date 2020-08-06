@@ -45,34 +45,40 @@
       // grid-gap: 2rem;
 
       .items {
-        .meteor-bg {
+        .anim-bg {
           background: #fff;
-          height: 120px;
-          width: 120px;
+          // color: #fff;
+          width: 110px;
+          height: 110px;
           border-radius: 50%;
-          position: relative;
           overflow: hidden;
-        }
-        .meteor {
-          padding-top: 20px;
-          border-radius: 50%;
-          color: orangered;
-          animation: move-in 3s linear infinite;
-          position: absolute;
+          position: relative;
+          display: flex;
+          flex-direction: column;
         }
 
-        // width: 400px;
-        // clip-path: polygon(50% 0, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-        // clip-path: polygon(
-        //   30% 0%,
-        //   70% 0%,
-        //   100% 30%,
-        //   100% 70%,
-        //   70% 100%,
-        //   30% 100%,
-        //   0% 70%,
-        //   0% 30%
-        // );
+        .meteor {
+          // padding-top: 20px;
+          border-radius: 50%;
+          color: orangered;
+          animation: move-in 2s linear infinite;
+          position: absolute;
+        }
+        .bulb {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          // color: yellow;
+          animation: light 3s ease-in-out infinite;
+        }
+        .res {
+          animation: change-icon 2s ease-in-out infinite;
+        }
+        .rocket {
+          animation: space-in 1s ease-in-out infinite;
+          position: absolute;
+        }
         clip-path: polygon(
           20% 0%,
           80% 0%,
