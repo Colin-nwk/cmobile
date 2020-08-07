@@ -1,0 +1,18 @@
+{
+  "name": "cmobile",
+  "version": "1.0.0",
+  "description": "portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "collins nwoko",
+  "license": "ISC",
+  "homepage": "https://colin-nwk/github.io/cmobile",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
