@@ -1,17 +1,21 @@
 {
   "name": "cmobile",
   "version": "1.0.0",
-  "description": "portfolio site",
+  "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/fad954aa-2082-4418-af30-516f1b939b06/deploy-status)](https://app.netlify.com/sites/cmix/deploys)",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d dist"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "portfolio"
-  ],
-  "author": "collins nwoko",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Colin-nwk/cmobile.git"
+  },
+  "author": "",
   "license": "ISC",
-  "homepage": "https://colin-nwk/github.io/cmobile",
+  "bugs": {
+    "url": "https://github.com/Colin-nwk/cmobile/issues"
+  },
+  "homepage": "https://github.com/Colin-nwk/cmobile#readme",
   "dependencies": {
     "gh-pages": "^3.1.0"
   }
