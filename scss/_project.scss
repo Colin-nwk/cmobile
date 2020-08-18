@@ -2,7 +2,9 @@
 .projects {
   background-color: hsla(176, 77%, 83%, 0.24);
   // overflow: hidden;
-
+  .icon {
+    color: set-text-color($light-color);
+  }
   .card-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -27,6 +29,7 @@
       }
       p {
         line-height: 1.8;
+        text-align: justify;
       }
 
       &:nth-child(odd) {
