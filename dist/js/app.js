@@ -43,7 +43,9 @@ load();
 
         // toggle nav
       } else {
-        navbarBg.style.background = " #1e836c";
+        navbarBg.style.cssText =
+          "background: #1e836c; slide-navbar-fade 0.5s ease forwards .3s";
+
         item.style.animation = `slide-navbar-fade 0.5s ease forwards ${
           index / 7 + 0.3
         }s`;
@@ -52,4 +54,10 @@ load();
     //toggler animation
     toggler.classList.toggle("line-toggle");
   });
+})();
+//date
+(() => {
+  let year = new Date().getFullYear();
+  let dateDisplay = document.querySelector(".date");
+  dateDisplay.innerHTML = year;
 })();

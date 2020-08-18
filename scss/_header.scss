@@ -6,24 +6,25 @@
   background: url(../img/img.jpg) no-repeat center center/cover;
   object-fit: contain;
   // filter: brightness(50%);
-  color: #fff;
+  color: $light-color;
 
   &::before {
     content: "";
     position: absolute;
+    // background: $primary-color;
     background: rgba(0, 0, 0, 0.65);
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    color: #fff;
+    color: set-text-color($light-color);
   }
   .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    padding: 3.5rem 3rem 2rem 1.5rem;
-    color: #fff;
+    padding: 3.5rem 1rem 2rem 1.5rem;
+    color: set-text-color($light-color);
     position: relative;
   }
   .logo {
@@ -33,10 +34,11 @@
     height: 50px;
     width: 50px;
     padding-top: 6px;
+    margin-right: auto;
 
     border-radius: 50%;
     position: relative;
-    color: #fff;
+    color: set-text-color($dark-color);
     // .globe {
     //   padding: 10px 0 0 10px;
     //   position: absolute;
@@ -44,23 +46,24 @@
   }
   .nav-list {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 
     .nav-items {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
       cursor: pointer;
     }
     .nav-link {
-      color: #fff;
+      color: set-text-color($dark-color);
       text-transform: uppercase;
       padding: 10px;
       transition: color 0.4s ease-in;
       // margin-right: 25px;
       &:hover {
-        color: #000;
+        color: set-text-color($main-color);
+        font-weight: 500;
       }
     }
     .navbar-toggler {
@@ -73,14 +76,14 @@
     padding-top: 5rem;
     margin: 0 auto;
     position: relative;
-    color: #fff;
+    color: $light-color;
     // .heading-1 {
     //   margin-top: 10rem;
     // }
     .heading-1,
     .heading-2,
     .heading-3 {
-      color: #fff;
+      color: $light-color;
     }
   }
   .typing {
@@ -89,7 +92,8 @@
       width: 5px;
       height: 5px;
       border-radius: 50%;
-      background-color: #fff;
+      // background-color: #fff;
+      background-color: $light-color;
       position: absolute;
       top: 90%;
       animation: blinking 1s 3s infinite;

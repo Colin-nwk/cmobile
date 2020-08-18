@@ -8,8 +8,8 @@ $secondary-color: #fcc2c293;
 //color function
 @function set-text-color($color) {
   @if (lightness($color) > 40) {
-    @return #000;
+    @return $dark-color;
   } @else {
-    @return #fff;
+    @return $light-color;
   }
 }

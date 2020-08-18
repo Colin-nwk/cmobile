@@ -1,13 +1,17 @@
 // PROJECT SECTION
 .projects {
-  overflow: hidden;
+  background-color: hsla(176, 77%, 83%, 0.24);
+  // overflow: hidden;
 
   .card-grid {
     display: grid;
     grid-template-columns: 1fr;
+    grid-gap: 1rem;
     .card {
       min-height: 450px;
+      // max-width: 400px;
       display: flex;
+      margin: 0 1rem;
       flex-direction: column;
       justify-content: space-evenly;
       align-content: center;
@@ -16,9 +20,9 @@
       transition: all 450ms linear;
       &:hover,
       &:active {
-        transform: scale(1.05);
+        transform: scale(1.02);
         .shake {
-          animation: shake 2s 1s linear;
+          animation: shake 1s 1s linear;
         }
       }
       p {

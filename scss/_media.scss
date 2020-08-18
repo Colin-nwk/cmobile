@@ -1,8 +1,8 @@
 @include media-sm {
   // mobile menu
-  // .navbar {
-  //   background-color: red;
-  // }
+  .header {
+    overflow: hidden;
+  }
   .nav-list {
     margin: 0;
     position: absolute;
@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    transform: translateY(-150%);
+    transform: translateY(150%);
     transition: all 0.5s ease-in;
     z-index: 100;
     &.nav-items {
@@ -29,7 +29,7 @@
     display: block;
     overflow: hidden;
     cursor: pointer;
-
+    // background: $main-color;
     padding: 12px 5px 1px 5px;
     width: 50px;
     height: 50px;
@@ -38,13 +38,13 @@
       display: block;
       width: 30px;
       height: 3px;
-      background: snow;
+      background: set-text-color($dark-color);
       margin: 5px;
       transition: all 0.3s ease;
     }
   }
   .active {
-    transform: translateY(2%);
+    transform: translateY(5%);
   }
   .line-toggle {
     .line-1 {
@@ -60,16 +60,25 @@
 
   .nav-items {
     width: inherit;
-    padding: 20px 0;
+    padding: 40px 0;
   }
-  .nav-link {
-    &:hover {
-      width: inherit;
-      &::before {
-        width: inherit;
-      }
+  // .nav-link {
+  //   &:hover {
+  //     width: inherit;
+  //     &::before {
+  //       width: inherit;
+  //     }
+  //   }
+  .card {
+    margin: 0 0.5rem;
+  }
+  .about {
+    .about-grid {
+      grid-template-columns: 1fr !important;
+      grid-gap: 0rem;
     }
   }
+
   // .about {
   //   .site-content {
   //     .about-grid {
@@ -103,6 +112,7 @@
   //     }
   //   }
   // }
+  //}
 }
 
 @include media-lg {
@@ -113,10 +123,11 @@
     font-size: 3.5rem;
   }
   .heading-3 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .about-skills,
   .card {
+    // margin: 0 1rem;
     .icon {
       font-size: 3.5rem;
     }
@@ -147,6 +158,7 @@
     .card-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      // overflow: hidden;
     }
   }
   .contact {
@@ -163,7 +175,7 @@
     .navbar {
       font-size: 1.2rem;
       .nav-items {
-        margin-right: 3rem;
+        margin-left: 2rem;
       }
     }
   }
@@ -190,8 +202,9 @@
       }
     }
     .about-skills,
-    .items,
+    // .items,
     .card {
+      margin: 0 2rem;
       .icon {
         font-size: 4.5rem;
       }

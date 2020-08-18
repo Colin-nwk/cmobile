@@ -21,7 +21,7 @@
           </a>
           <ul class="nav-list">
             <li class="nav-items">
-              <a href="#projects" class="nav-link">Project</a>
+              <a href="#project" class="nav-link">Project</a>
             </li>
             <li class="nav-items">
               <a href="#about" class="nav-link">About</a>
@@ -48,7 +48,7 @@
     </header>
     <main class="main-area">
       <!-- ABOUT SECTION -->
-      <section class="about" id="about">
+      <section class="about pb-3" id="about">
         <div id="skill" class="">
           <div id="skill-icons" class="about-bg py-2">
             <div class="container">
@@ -92,7 +92,7 @@
             </div> -->
             <div class="items">
                 <div class="anim-bg">
-                  <i class="fas fa-meteor icon meteor "></i>
+                  <i class="fas fa-bolt icon meteor "></i>
                 </div>
                 <p class="text-2 upper">fast</p>
               <p class="text-2">
@@ -101,17 +101,16 @@
             </div>
             <div class="items">
               <div class="anim-bg">
-                <i class="fas fa-lightbulb icon bulb"></i>
+                <i class="far fa-lightbulb icon bulb"></i>
               </div>
               <p class="text-2 upper">intuitive</p>
               <p class="text-2">
                 strong preference for easy to use, intuitive UX/UI
               </p>
+              
             </div>
             <div class="items">
               <div class="anim-bg">
-
-                <i class="fas fa-desktop icon res"></i>
                 <i class="fas fa-mobile-alt icon res"></i>
               </div>
               <p class="text-2 upper">responsive</p>
@@ -122,7 +121,7 @@
             <div class="items">
               <div class="anim-bg">
 
-                <i class="fas fa-rocket icon rocket"></i>
+                <i class="far fa-handshake icon rocket"></i>
               </div>
               <p class="text-2 upper">dynamic</p>
               <p class="text-2">
@@ -134,21 +133,23 @@
         </div>
       </section>
       <!-- project section -->
-      <section class="projects my-3" id="projects">
-        <h2 class="heading-2">What I've been working on</h2>
-        <div class="card-grid pt-2">
+      <section class="projects my-3 pb-5 pt-4"  id="project">
+        <div class="container">
+
+          <h2 class="heading-2 pt-1">What I've been working on</h2>
+          <div class="card-grid pt-2">
           <div class="card p-2">
             <p class="heading-3">project name</p>
             <div class="project-icon">
-              <i class="fas fa-magnet  icon"></i>
+              <i class="far fa-check-circle  icon"></i>
             </div>
-              <p class="text-2">CSS | Javascript | Wordpress</p>
-              <p class="text-2">
+            <p class="text-2 pt-1">CSS | Javascript | Wordpress</p>
+              <p class="text-2 py-2">
                 project description Lorem ipsum dolor sit amet consectetur
                 adipisicing elit. o! Lorem, ipsum dolor sit amet consectetur
                 adipisicing elit. Tempora esse consequuntur tenetur.
               </p>
-              <div class="btn-links">
+              <div class="btn-links pb-1">
                 <a class="btn btn-primary shake">
                   <i class="fas fa-eye"></i> view site
                 </a>
@@ -157,27 +158,27 @@
                 </a>
               </div>
               </div>
-             <div class="card p-2">
+              <div class="card p-2">
               <p class="heading-3">project name</p>
               <div class="project-icon">
-              <i class="fas fa-magnet icon "></i>
+                <i class="far fa-check-circle icon "></i>
               </div>
-              <p class="text-2">CSS| Javascript |Wordpress| sass</p>
-              <p class="text-2">
+              <p class="text-2 pt-1">CSS| Javascript |Wordpress| sass</p>
+              <p class="text-2 py-2">
                 project description Lorem ipsum dolor sit amet consectetur
                 adipisicing elit. o! Lorem, ipsum dolor sit amet consectetur
                 adipisicing elit. Tempora esse consequuntur tenetur.
               </p>
-              <div class="btn-links">
+              <div class="btn-links pb-1">
                 <a class="btn btn-primary shake">
-                  <i class="fas fa-eye"></i> view site
+                  <i class="far fa-eye"></i> view site
                 </a>
                 <a class="btn btn-secondary">
                   <i class="fab fa-github"></i> on github
                 </a>
               </div>
               </div>
-          <!-- <div class="card">
+              <!-- <div class="card">
             <img src="../img/img.jpg" alt="card" class="img-fluid" />
             <div class="card-content">
               <p class="heading-3">project name</p>
@@ -197,6 +198,7 @@
             </div>
           </div> -->
         </div>
+      </div>
       </section>
       <!-- contact -->
       <section class="contact" id="contact">
@@ -218,7 +220,7 @@
             id="name"
             placeholder="name"
             class="form-control"
-          />
+          required/>
           <!-- <label for="email">email</label> -->
           <input
           type="email"
@@ -226,7 +228,7 @@
             id="email"
             placeholder="email"
             class="form-control"
-            />
+            required/>
             <!-- <label for="message">message</label> -->
             <textarea
             name="message"
@@ -235,7 +237,7 @@
             rows="10"
             placeholder="message"
             class="message-input"
-            ></textarea>
+           required ></textarea>
             <div class="field">
               <div data-netlify-recaptcha=></div>
             </div>
@@ -260,7 +262,7 @@
           <a href="#contact" class="footer-link" id="#contact">hire me</a>
         </div>
         <div id="rights">
-        &COPY;<span>2020</span> <a href="#home">Collins Nwoko</a> All rights
+        &COPY;<span class="date"></span> <a href="#home">Collins Nwoko</a> All rights
         reserved
       </div>
     </footer>
