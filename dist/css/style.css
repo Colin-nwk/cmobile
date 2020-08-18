@@ -354,6 +354,32 @@ a {
   padding: 0 5rem;
 }
 
+@-webkit-keyframes slide-navbar-fade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes slide-navbar-fade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
 @-webkit-keyframes globeBounce {
   0% {
     -webkit-transform: translateY(0px);
@@ -1020,7 +1046,11 @@ a {
 }
 
 .header .nav-list .nav-link:hover {
-  color: #1e836c;
+  color: #000;
+}
+
+.header .nav-list .navbar-toggler {
+  display: none;
 }
 
 .header-content {
@@ -1406,18 +1436,80 @@ a {
   font-weight: 400;
 }
 
-@media screen and (min-width: 500px) {
-  .about .site-content .about-grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
+@media screen and (max-width: 500px) {
+  .nav-list {
+    margin: 0;
+    position: absolute;
+    right: 0px;
+    height: 400px;
+    top: 13vh;
+    background: #1e836c;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100%;
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    z-index: 100;
   }
-  .about .site-content .about-grid .items {
-    min-height: 280px;
-    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  .nav-list.nav-items {
+    opacity: 0;
+    padding: 0;
+  }
+  .navbar-toggler {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 12px 5px 1px 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .navbar-toggler .line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: snow;
+    margin: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .active {
+    -webkit-transform: translateY(2%);
+            transform: translateY(2%);
+  }
+  .line-toggle .line-1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 7px);
+            transform: rotate(-45deg) translate(-5px, 7px);
+  }
+  .line-toggle .line-2 {
+    opacity: 0;
+  }
+  .line-toggle .line-3 {
+    -webkit-transform: rotate(45deg) translate(-3px, -7px);
+            transform: rotate(45deg) translate(-3px, -7px);
+  }
+  .nav-items {
+    width: inherit;
+    padding: 20px 0;
+  }
+  .nav-link:hover {
+    width: inherit;
+  }
+  .nav-link:hover::before {
+    width: inherit;
   }
 }
 

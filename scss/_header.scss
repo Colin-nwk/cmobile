@@ -60,8 +60,11 @@
       transition: color 0.4s ease-in;
       // margin-right: 25px;
       &:hover {
-        color: $main-color;
+        color: #000;
       }
+    }
+    .navbar-toggler {
+      display: none;
     }
   }
   &-content {

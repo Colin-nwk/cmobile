@@ -13,28 +13,6 @@ const typing = () => {
   }
 };
 typing();
-// fading animation controller
-
-/*
-const faders = document.querySelectorAll(".fade-in");
-const appearOptions = {
-  threshold: 1,
-  rootMargin: "0px 0px -200px 0px",
-};
-const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      entry.target.classList.add("appear");
-      appearOnScroll.unobserve(entry.target);
-    }
-  });
-}, appearOptions);
-faders.forEach((fader) => {
-  appearOnScroll.observe(fader);
-});
-*/
 
 let spinnerWrapper = document.querySelector(".spinner-wrapper");
 const load = () => {
@@ -44,3 +22,34 @@ const load = () => {
   });
 };
 load();
+
+// mobile menu
+//using IIFE
+(function () {
+  const navbarBg = document.querySelector(".navbar");
+  const toggler = document.querySelector(".navbar-toggler");
+  const navbar = document.querySelector(".nav-list");
+  const navbarItems = document.querySelectorAll(".nav-items");
+  const lines = document.querySelectorAll(".line");
+
+  toggler.addEventListener("click", () => {
+    // toggle nav
+    navbar.classList.toggle("active");
+    // animate items
+    navbarItems.forEach((item, index) => {
+      if (item.style.animation) {
+        item.style.animation = "";
+        navbarBg.style.background = "";
+
+        // toggle nav
+      } else {
+        navbarBg.style.background = " #1e836c";
+        item.style.animation = `slide-navbar-fade 0.5s ease forwards ${
+          index / 7 + 0.3
+        }s`;
+      }
+    });
+    //toggler animation
+    toggler.classList.toggle("line-toggle");
+  });
+})();
