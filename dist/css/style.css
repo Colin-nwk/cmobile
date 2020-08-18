@@ -12,6 +12,7 @@ html {
 body {
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 li {
@@ -354,6 +355,42 @@ a {
   padding: 0 5rem;
 }
 
+.fade-in {
+  opacity: 0;
+  -webkit-transition: opacity 250ms ease-in;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.from-left {
+  -webkit-transform: translateX(-70%);
+          transform: translateX(-70%);
+}
+
+.from-right {
+  -webkit-transform: translateX(70%);
+          transform: translateX(70%);
+}
+
+.from-left,
+.from-right {
+  opacity: 0;
+  -webkit-transition: opacity 250ms ease, -webkit-transform 500ms ease;
+  transition: opacity 250ms ease, -webkit-transform 500ms ease;
+  transition: opacity 250ms ease, transform 500ms ease;
+  transition: opacity 250ms ease, transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+.from-left.appear,
+.from-right.appear {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 @-webkit-keyframes slide-navbar-fade {
   from {
     opacity: 0;
@@ -569,39 +606,7 @@ a {
     -webkit-transform: scale(1) rotateZ(0);
             transform: scale(1) rotateZ(0);
   }
-  5% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
-  10% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
-  15% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
-  20% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
   25% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
-  30% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
-  35% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
-  40% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
-  45% {
     -webkit-transform: scale(1.1) rotateZ(5deg);
             transform: scale(1.1) rotateZ(5deg);
   }
@@ -609,45 +614,13 @@ a {
     -webkit-transform: scale(1.1) rotateZ(-5deg);
             transform: scale(1.1) rotateZ(-5deg);
   }
-  55% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
-  60% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
-  65% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
-  70% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
   75% {
     -webkit-transform: scale(1.1) rotateZ(5deg);
             transform: scale(1.1) rotateZ(5deg);
   }
-  80% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
-  85% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
-  90% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
-  95% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
   100% {
-    -webkit-transform: scale(1) rotateZ(0);
-            transform: scale(1) rotateZ(0);
+    -webkit-transform: scale(1.1) rotateZ(0deg);
+            transform: scale(1.1) rotateZ(0deg);
   }
 }
 
@@ -656,39 +629,7 @@ a {
     -webkit-transform: scale(1) rotateZ(0);
             transform: scale(1) rotateZ(0);
   }
-  5% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
-  10% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
-  15% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
-  20% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
   25% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
-  30% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
-  35% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
-  40% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
-  45% {
     -webkit-transform: scale(1.1) rotateZ(5deg);
             transform: scale(1.1) rotateZ(5deg);
   }
@@ -696,45 +637,13 @@ a {
     -webkit-transform: scale(1.1) rotateZ(-5deg);
             transform: scale(1.1) rotateZ(-5deg);
   }
-  55% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
-  60% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
-  65% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
-  70% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
   75% {
     -webkit-transform: scale(1.1) rotateZ(5deg);
             transform: scale(1.1) rotateZ(5deg);
   }
-  80% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
-  85% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
-  90% {
-    -webkit-transform: scale(1.1) rotateZ(-5deg);
-            transform: scale(1.1) rotateZ(-5deg);
-  }
-  95% {
-    -webkit-transform: scale(1.1) rotateZ(5deg);
-            transform: scale(1.1) rotateZ(5deg);
-  }
   100% {
-    -webkit-transform: scale(1) rotateZ(0);
-            transform: scale(1) rotateZ(0);
+    -webkit-transform: scale(1.1) rotateZ(0deg);
+            transform: scale(1.1) rotateZ(0deg);
   }
 }
 
@@ -1188,6 +1097,10 @@ a {
   background-color: rgba(178, 245, 241, 0.24);
 }
 
+.projects .icon {
+  color: #141414;
+}
+
 .projects .card-grid {
   display: -ms-grid;
   display: grid;
@@ -1231,6 +1144,7 @@ a {
 
 .projects .card-grid .card p {
   line-height: 1.8;
+  text-align: justify;
 }
 
 .projects .card-grid .card:nth-child(odd) {

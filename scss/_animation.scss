@@ -1,48 +1,30 @@
-// .spinner-wrapper {
-//   position: fixed;
-//   z-index: 9;
-//   background: #000;
-//   //   top: 50%;
-//   //   left: 50%;
-//   //   transform: translate(-50%, -50%);
-//   width: 100%;
-//   height: 100%;
-//   background-color: $main-color;
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
 
-//   .spinner {
-//     border: 0 solid transparent;
-//     border-radius: 50%;
-//     width: 150px;
-//     height: 150px;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     &::after,
-//     &::before {
-//       content: "";
-//       border: 1em solid $secondary-color;
-//       border-radius: 50%;
-//       height: inherit;
+  &.appear {
+    opacity: 1;
+  }
+}
 
-//       animation: loader 2s linear infinite;
-//       opacity: 0;
-//     }
-
-//     &::before {
-//       animation-delay: 0.5s;
-//     }
-//   }
-// }
-
-// .fade-in {
-//   opacity: 0;
-//   transition: opacity 250ms ease-in;
-
-//   .appear {
-//     opacity: 1;
-//   }
-// }
+.from-left {
+  transform: translateX(-70%);
+}
+.from-right {
+  transform: translateX(70%);
+}
+.from-left,
+.from-right {
+  opacity: 0;
+  transition: opacity 250ms ease, transform 500ms ease;
+}
+.from-left,
+.from-right {
+  &.appear {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 // keyframes
 
@@ -146,65 +128,17 @@
   0% {
     transform: scale(1) rotateZ(0);
   }
-  5% {
-    transform: scale(1.1) rotateZ(5deg);
-  }
-  10% {
-    transform: scale(1.1) rotateZ(-5deg);
-  }
-  15% {
-    transform: scale(1.1) rotateZ(5deg);
-  }
-  20% {
-    transform: scale(1.1) rotateZ(-5deg);
-  }
   25% {
-    transform: scale(1.1) rotateZ(5deg);
-  }
-  30% {
-    transform: scale(1.1) rotateZ(-5deg);
-  }
-  35% {
-    transform: scale(1.1) rotateZ(5deg);
-  }
-  40% {
-    transform: scale(1.1) rotateZ(-5deg);
-  }
-  45% {
     transform: scale(1.1) rotateZ(5deg);
   }
   50% {
     transform: scale(1.1) rotateZ(-5deg);
   }
-  55% {
-    transform: scale(1.1) rotateZ(5deg);
-  }
-  60% {
-    transform: scale(1.1) rotateZ(-5deg);
-  }
-  65% {
-    transform: scale(1.1) rotateZ(5deg);
-  }
-  70% {
-    transform: scale(1.1) rotateZ(-5deg);
-  }
   75% {
     transform: scale(1.1) rotateZ(5deg);
   }
-  80% {
-    transform: scale(1.1) rotateZ(-5deg);
-  }
-  85% {
-    transform: scale(1.1) rotateZ(5deg);
-  }
-  90% {
-    transform: scale(1.1) rotateZ(-5deg);
-  }
-  95% {
-    transform: scale(1.1) rotateZ(5deg);
-  }
   100% {
-    transform: scale(1) rotateZ(0);
+    transform: scale(1.1) rotateZ(0deg);
   }
 }
 

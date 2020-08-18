@@ -55,9 +55,49 @@ load();
     toggler.classList.toggle("line-toggle");
   });
 })();
-//date
 (() => {
+  //date
   let year = new Date().getFullYear();
   let dateDisplay = document.querySelector(".date");
   dateDisplay.innerHTML = year;
+  // animate logo
+  setInterval(() => {
+    let globe = document.getElementById("globe");
+    globe.innerHTML = "&#xf57c;";
+    setTimeout(() => {
+      globe.innerHTML = "&#xf57d;";
+    }, 1000);
+    setTimeout(() => {
+      globe.innerHTML = "&#xf57e;";
+    }, 2000);
+    // setTimeout(() => {
+    //   globe.innerHTML = "&#xf7a2;";
+    // }, 3000);
+  }, 3000);
 })();
+
+//section observers
+const faders = document.querySelectorAll(".fade-in");
+const sliders = document.querySelectorAll(".slide-in");
+const appearOptions = {
+  threshold: 0,
+  rootMargin: "0px 0px -150px 0px",
+};
+const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add("appear");
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+}, appearOptions);
+
+faders.forEach((fader) => {
+  appearOnScroll.observe(fader);
+});
+
+sliders.forEach((slider) => {
+  appearOnScroll.observe(slider);
+});
